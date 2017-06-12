@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, AppLoading } from 'react-native';
+import { View, Text, AppLoading, AsyncStorage } from 'react-native';
 import { connect } from 'react-redux';
 
 import * as actions from '../actions/index';
@@ -7,10 +7,10 @@ import Slides  from '../components/Slides';
 
 const SLIDE_DATA = [
   { text: 'Welcome to Job Finder!\nSwipe right to continue.', color: '#009688' },
-  { text: 'Sign In\nSet your location\nThen get to swiping!', color: '#03a9f4' },
+  { text: 'Sign In.\nChoose a location.\nEnter a job title.\nThen get to swiping!', color: '#03a9f4' },
   { text: 'Swipe right to like a job\nleft to dislike!', color: '#009688' },
   { text: 'View your saved jobs under the review tab!', color: '#03a9f4' },
-];color:
+];
 
 class WelcomeScreen extends Component {
   async componentWillMount() {

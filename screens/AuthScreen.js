@@ -10,22 +10,21 @@ class AuthScreen extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.onAuthComplete(nextProps);
-  }
+    console.log(nextProps);
+      this.onAuthComplete(nextProps);
+    }
 
   onAuthComplete(props) {
+    console.log(props);
     if(props.token){
       this.props.navigation.navigate('map');
     } else {
-      this.props.navigation.navigate('welcome');
+      this.props.navigation.navigate('map');
     }
   }
   render() {
     return (
       <View>
-        <Text>AuthScreen</Text>
-        <Text>AuthScreen</Text>
-        <Text>AuthScreen</Text>
       </View>
     );
   }

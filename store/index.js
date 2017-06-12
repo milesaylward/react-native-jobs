@@ -22,6 +22,6 @@ A gotcha of redux-persist is that it when it draws in your data from AsyncStorag
 is that you must use redux-persist-migrate whenever you redeploy your application
 to ensure that the correct type is passed throught your application
 */
-persistStore(store, { storage: AsyncStorage, whitelist: ['savedJobs'] }).purge();
+persistStore(store, { storage: AsyncStorage, whitelist: ['savedJobs'] });
 
 export default store;

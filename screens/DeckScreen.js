@@ -21,7 +21,8 @@ class DeckScreen extends Component {
       formattedRelativeTime,
       snippet,
       longitude,
-      latitude
+      latitude,
+      formattedLocation
     } = job;
 
     const initialRegion = {
@@ -41,6 +42,11 @@ class DeckScreen extends Component {
             cacheEnabled={Platform.OS === 'android'}
             initialRegion={initialRegion}
             >
+              <MapView.Marker
+                coordinate={{latitude, longitude}}
+                title={company}
+                description={formattedLocation}
+              />
             </MapView>
           </View>
         <View style={styles.detailWrapper}>
